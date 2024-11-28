@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #5018DE;
+    font-family: "Silkscreen", sans-serif;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #5018DE, #9118DE, #8E6DDF);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.calc {
+    background-color: silver;
+    display: grid;
+    width: 500px;
+    height: 700px;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+}
+
+.screen {
+    background-color: whitesmoke;
+    grid-area: 1/1/2/2;
+    margin: 20px 10px 20px 10px;
+    border-radius: 10px;
+    font-size: 60px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+button {
+    width: 100px;
+    height: 70px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-size: 25px;
+    color: #5018DE;
+    margin-top: 10px;
+}
+
+.pressed {
+    background-color: darkgrey;
+}
+
+.first {
+    grid-area: 2/1/3/2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.second {
+    grid-area: 3/1/4/2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.third {
+    grid-area: 4/1/5/2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fourth {
+    grid-area: 5/1/6/2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fifth {
+    grid-area: 6/1/7/2;
+    display: flex;
+    justify-content: space-around;
+}
