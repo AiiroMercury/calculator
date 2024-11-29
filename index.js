@@ -93,7 +93,7 @@ function operation(number) {
     } else if (sign && num2.length >=0 && num2.length < 10 && numbers.includes(number)) {
         addNumber2(number);
         console.log(numero2);
-    } else if (number === "Enter") {
+    } else if (number === "Enter" || number === "+" || number === "-" || number === "x" || number === "*" || number === "/") {
         if (signn[0] === "+") {
             var na1 = Number(numero1);
             var na2 = Number(numero2);
