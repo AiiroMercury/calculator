@@ -94,18 +94,18 @@ function operation(number) {
         addNumber2(number);
         console.log(numero2);
     } else if (number === "Enter" || number === "+" || number === "-" || number === "x" || number === "*" || number === "/") {
-        if (signn[-1] === "+") {
+        if (signn[signn.length - 1] === "+") {
             var na1 = Number(numero1);
             var na2 = Number(numero2);
             var result = (na1 + na2);
         }
-        if (signn[-1] === "-") {
+        if (signn[signn.length - 1] === "-") {
             var result = (numero1 - numero2);
         }
-        if (signn[-1] === "/") {
+        if (signn[signn.length - 1] === "/") {
             var result = (numero1 / numero2);
         }
-        if (signn[-1] === "x" || signn[0] === "*") {
+        if (signn[signn.length - 1] === "x" || signn[0] === "*") {
             var result = (numero1 * numero2);
         }
         if (result.toString().length > 10) {
