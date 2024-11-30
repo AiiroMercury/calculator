@@ -8,7 +8,7 @@ var oper = ["+","-","/","x","*"];
 var sign = false;
 var signn = [];
 var result = 0;
-$("span").text("0");
+$("span").text(result);
 
 
 $("button").click(function(event) {
@@ -184,7 +184,7 @@ function press(key) {
 }
 
 function noll() {
-    $("span").text("0");
+    $("span").text(result);
     num = [];
     numero1 = 0;
     numero2 = 0;
