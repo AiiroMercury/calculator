@@ -184,7 +184,6 @@ function press(key) {
 }
 
 function noll() {
-    $("span").text(result);
     num = [];
     numero1 = 0;
     numero2 = 0;
@@ -192,4 +191,5 @@ function noll() {
     sign = false;
     signn = [];
     result = 0;
+    $("span").text(result);
 }
