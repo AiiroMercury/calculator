@@ -10,12 +10,12 @@ var signn = [];
 var result = 0;
 $("span").text(result);
 
-
 $("button").click(function(event) {
     numeri(event.target.id);
     if (signn.length > 1) {
         operation(numero1, numero2, signn[signn.length - 2]);
         numero1 = result;
+        result = 0;
         numero2 = 0;
         num2 = [];
         var sym = signn[signn.length - 1];
@@ -23,13 +23,17 @@ $("button").click(function(event) {
         signn.push(sym);
     }
     if (signn.length <= 1) {
+        if (result > 0 && numbers.includes(event.target.id)) {
+            noll();
+            numeri(event.target.id);
+        }
         if (event.target.id === "Enter") {
             operation(numero1, numero2, signn[signn.length - 1]);
             numero1 = result;
             numero2 = 0;
             num2 = [];
             signn = [];
-            sign = false;
+            sign = false; 
         }
     }
     sound();
@@ -41,6 +45,7 @@ $(document).keydown(function(event) {
     if (signn.length > 1) {
         operation(numero1, numero2, signn[signn.length - 2]);
         numero1 = result;
+        result = 0;
         numero2 = 0;
         num2 = [];
         var sym = signn[signn.length - 1];
@@ -48,6 +53,10 @@ $(document).keydown(function(event) {
         signn.push(sym);
     }
     if (signn.length <= 1) {
+        if (result > 0 && numbers.includes(event.target.id)) {
+            noll();
+            numeri(event.target.id);
+        }
         if (event.key === "Enter") {
             operation(numero1, numero2, signn[signn.length - 1]);
             numero1 = result;
