@@ -32,7 +32,6 @@ $("button").click(function(event) {
             numero1 = result;
             numero2 = 0;
             num2 = [];
-            signn = [];
             sign = false; 
         }
     }
@@ -62,7 +61,6 @@ $(document).keydown(function(event) {
             numero1 = result;
             numero2 = 0;
             num2 = [];
-            signn = [];
             sign = false;
         }
     }
